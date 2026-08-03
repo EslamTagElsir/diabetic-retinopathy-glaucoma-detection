@@ -1,3 +1,20 @@
+import os
+import sys
+import subprocess
+
+# --- OpenCV Headless Fix for Streamlit Cloud ---
+# Streamlit Cloud installs both opencv-python (via grad-cam) and opencv-python-headless.
+# This causes libGL/libgthread errors. We force uninstall the GUI version if needed.
+try:
+    import cv2
+except ImportError as e:
+    if "libgthread" in str(e) or "libGL" in str(e):
+        print("🔧 Attempting to fix OpenCV dependencies for Streamlit Cloud...")
+        subprocess.check_call([sys.executable, "-m", "pip", "uninstall", "-y", "opencv-python", "opencv-python-headless"])
+        subprocess.check_call([sys.executable, "-m", "pip", "install", "opencv-python-headless"])
+        print("✅ OpenCV fixed.")
+# -----------------------------------------------
+
 import streamlit as st
 import os
 from PIL import Image
