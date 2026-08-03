@@ -13,6 +13,6 @@ echo [INFO] Installing requirements...
 pip install -r requirements.txt
 
 echo [INFO] Launching Streamlit Server...
-python -m streamlit run app_streamlit.py
+python -m streamlit run app_streamlit.py --server.port 8507
 
 pause

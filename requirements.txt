@@ -14,3 +14,4 @@ pandas
 grad-cam
 shap
 streamlit
+albumentations
