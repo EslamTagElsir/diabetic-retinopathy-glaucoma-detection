@@ -1,4 +1,5 @@
 <div align="center">
+  <img src="assets/readme-hero.svg" alt="Retinal imaging AI research prototype banner" width="100%">
   <h1>👁️ Diabetic Retinopathy & Glaucoma Detection AI</h1>
   <p><i>An academic computer-vision prototype for fundus-image analysis, with a Diabetic Retinopathy classifier, Grad-CAM visualizations, and heuristic optic-disc measurements</i></p>
   
@@ -14,6 +15,12 @@
 <br>
 
 This repository contains an **academic prototype** for analyzing retinal fundus images. It combines a five-class Diabetic Retinopathy (DR) image classifier, Grad-CAM visualizations, and an OpenCV-based heuristic estimate of the vertical Cup-to-Disc Ratio (vCDR) as an exploratory glaucoma-risk signal. It is intended for software demonstration and experimentation—not clinical diagnosis, triage, or treatment decisions.
+
+---
+
+## 🧭 Prototype workflow
+
+<p align="center"><img src="assets/inference-workflow.svg" alt="Retinal imaging prototype inference workflow" width="100%"></p>
 
 ---
 
